@@ -1,91 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Navigation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
+        *{
+            margin: 0%;
+            padding: 0%;
             box-sizing: border-box;
-        }
 
-        nav {
+        }
+        header{
             width: 100%;
-            height: 75px;
-            line-height: 75px;
-            padding: 0px 100px;
-            position: relative;
-            background-image: linear-gradient(#033747, #012733);
-
+            height: 110vh;
+            background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),  url(https://images.unsplash.com/photo-1543269664-7eef42226a21?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+           
+            background-size: cover;
+            font-family: sans-serif;
         }
-
-        nav .logo p {
-            font-size: 30px;
-            font-weight: bold;
-            float: left;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            cursor: pointer;
+        nav{
+            width: 100%;
+            height: 100px;
+           
+            color: black;
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            padding-top: 22px;
         }
-
-        nav ul {
-            float: right;
+        .logo{
+            font-size: 2em;
+            letter-spacing: 2px;
+            color: aliceblue;
         }
-
-        nav li {
-            display: inline-block;
-            list-style: none;
-        }
-
-        nav li a {
-            font-size: 18px;
-            text-transform: uppercase;
-            color: white;
-            padding: 0px 30px;
+        .menu a{
             text-decoration: none;
+            color: aliceblue;
+            padding: 10px 20px;
+            font-size: 20px;
+            position: relative;
+        }
+        .menu a:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            border-bottom: 2px solid indianred;
+            transition: 0.4s linear;
 
         }
-
-        nav li a:hover {
-            color: #ff8c69;
-            transition: all 0.4s ease 0s;
+        .menu a:hover::before{
+            width: 90%;
         }
-        img{
-          height: 80%;
-          width: 100%;
-      }
-      /* .containe h1{
-       text-align: center;
-       color: red;
-       bottom: 20px;
-} */
+        .register  a{
+            text-decoration: none;
+            color: aliceblue;
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: indianred;
+            border-radius: 8px;
+            transition: 0.4s;
+            
 
+
+        }
+        .register  a:hover{
+            background: transparent;
+            border: 1px solid indianred;
+            
+        }
+        .text{
+            max-height: 650px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%,-50%);
+            color: white;
+            margin-bottom: 20px;
+            
+        }
+        .text span{
+            letter-spacing: 3px;
+        }
+        .text h1{
+            font-size:2em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .text a{
+            text-decoration: none;
+            background-color: indianred;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            letter-spacing: 2px;
+            transition: 0.4s;
+        }
+        .text a:hover{
+            background: transparent;
+            border: 1px solid indianred;
+        }
+       
     </style>
 </head>
-
 <body>
-
-    <nav>
-        <div class="logo">
-            <p>Logo</p>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contect</a></li>
-            <li><a href="#">Service</a></li>
-        </ul>
-    </nav>
-</div>
-    <div class="containe">
-        <img src="https://images.unsplash.com/photo-1705301766257-c0f31029fcc5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="">
-
-
-        </div>
-    </div>
-
-</body
-
+    <header>
+        <nav>
+            <div class="logo">
+            LOng-x
+            </div>
+            <div class="menu">
+                <a href="#">home</a>
+                <a href="#">visit</a>
+                <a href="#">photos</a>
+                <a href="#">deaital</a>
+                <a href="#">contact</a>
+            </div>
+            <div class="register">
+                <a href="#">register</a>
+            </div>
+        </nav>
+        <section class="text">
+            <span>What is hacking</span>
+            <h1>The act of compromisung digital device and network though unauthorized access to an account or computer system.</h1>
+            <br>
+            <a href="#">Test your mind</a>
+        </section>
+    </header>
+    
+</body>
 </html>
